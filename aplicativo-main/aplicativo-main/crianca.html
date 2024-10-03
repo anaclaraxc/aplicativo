@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Estilo Hero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+        }
+
+        /* Cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #ffffff;
+        }
+
+        .h1{
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            min-height: 90vh;
+            background-color: #f8f8ff;
+            overflow: hidden;
+        }
+
+        /* Textos */
+        .hero .text-content {
+            max-width: 45%;
+            z-index: 2;
+            margin-right: 50px; /* Afastar do círculo rosa */
+        }
+
+        .hero .text-content h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero .text-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .btn.start {
+            background-color: #ff5757;
+            color: #fff;
+            border: none;
+        }
+
+        .btn.pais{
+            background-color: #fff;
+            color: #66B9FA ;
+            border: 2px solid #66B9FA ;
+            margin-left: 15%;
+        }
+
+        /* Imagem */
+        .hero .image-content img {
+            max-width: 90%;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            transform: translateY(-20px); /* Colocar imagem sobre a bola roxa */
+        }
+
+        /* Bolas de fundo */
+        .background-circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .circle1 {
+            width: 750px; /* Aumentar tamanho da bola roxa */
+            height: 750px;
+            background-color: #66B9FA ;
+            top: -200px;
+            right: -200px;
+        }
+
+        .circle2 {
+            width: 400px;
+            height: 400px;
+            background-color: #0373c9 ;
+            bottom: -150px;
+            left: -150px;
+        }
+
+        .autily{
+            width: 20%;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .hero .text-content {
+                max-width: 100%;
+                margin-right: 0;
+            }
+
+            .hero .image-content {
+                order: -1;
+            }
+
+            .circle1 {
+                width: 500px;
+                height: 500px;
+                right: -100px;
+                top: -100px;
+            }
+
+            .circle2 {
+                width: 300px;
+                height: 300px;
+                left: -80px;
+                bottom: -80px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero .text-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .text-content p {
+                font-size: 1rem;
+            }
+
+            .circle1 {
+                width: 300px;
+                height: 300px;
+                right: -50px;
+                top: -50px;
+            }
+
+            .circle2 {
+                width: 200px;
+                height: 200px;
+                left: -50px;
+                bottom: -50px;
+            }
+
+            .hero .image-content img {
+                transform: translateY(0); /* Ajustar a posição da imagem em telas menores */
+            }
+        }
+    </style>
+<head>   
+    <img src="img/autily_branco.png" alt="" class="autily"> 
+
+</head>
+<body>
+    <section class="hero">
+        <div class="text-content">
+            <h1>Olá, amigo!</h1>
+            <p>Seja bem-vindo ao Autily</p>
+            <div class="buttons">
+                <a href="pais.html" class="btn pais">Ir para área dos pais</a>
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="img/ia (1).png " alt="Ilustração">
+        </div>
+
+        <!-- Bolas de fundo maiores -->
+        <div class="background-circle circle1"></div>
+        <div class="background-circle circle2"></div>
+    </section>
+</body>
+</html>
